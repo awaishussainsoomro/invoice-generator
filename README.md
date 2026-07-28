@@ -1,6 +1,6 @@
 # Invoice Generator
 
-A clean, responsive invoice generator built with React. Fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF — all in the browser, no backend required.
+A clean, responsive invoice generator built with React. Fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF, all in the browser, no backend required.
 
 **Live demo:** [add your Vercel link here]
 
