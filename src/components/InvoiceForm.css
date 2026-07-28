@@ -1,0 +1,263 @@
+.invoice-page {
+  background: #F9F7F3;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+}
+
+.invoice-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.invoice-title {
+  font-family: Georgia, serif;
+  color: #161B33;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.invoice-subtitle {
+  color: #8A8577;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.invoice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .invoice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid #E4DFD3;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.form-card {
+  padding: 24px;
+}
+
+.section-title {
+  font-family: Georgia, serif;
+  color: #161B33;
+  font-size: 16px;
+  margin: 20px 0 10px;
+}
+
+.section-title:first-child {
+  margin-top: 0;
+}
+
+.inv-input {
+  width: 100%;
+  border: 1px solid #E4DFD3;
+  border-radius: 6px;
+  padding: 9px 10px;
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: white;
+}
+
+.inv-input:focus {
+  border-color: #161B33;
+  box-shadow: 0 0 0 3px rgba(22,27,51,0.08);
+}
+
+.inv-input.error {
+  border-color: #C0392B;
+}
+
+.error-text {
+  color: #C0392B;
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.remove-btn {
+  color: #8A8577;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.15s;
+}
+
+.remove-btn:hover {
+  color: #C0392B;
+}
+
+.remove-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.add-item-btn {
+  font-size: 13px;
+  color: #161B33;
+  border: 1px solid #E4DFD3;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: white;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.download-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: #161B33;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.download-btn:hover {
+  background: #232B52;
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
+
+.preview-card {
+  overflow: hidden;
+  align-self: start;
+}
+
+.preview-header {
+  background: #161B33;
+  padding: 20px;
+  border-bottom: 3px solid #C9A24B;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.preview-business-name {
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.preview-business-email {
+  color: #C7C9D6;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.preview-invoice-no {
+  color: #C9A24B;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.preview-date {
+  color: #C7C9D6;
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+
+.preview-body {
+  padding: 20px;
+}
+
+.preview-billed-to {
+  font-size: 12px;
+  color: #8A8577;
+  margin-bottom: 14px;
+}
+
+.preview-table {
+  width: 100%;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.preview-table thead tr {
+  background: #161B33;
+}
+
+.preview-table th {
+  color: white;
+  padding: 6px 8px;
+  font-size: 11px;
+}
+
+.preview-table td {
+  padding: 6px 8px;
+}
+
+.item-name-cell {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row-even {
+  background: #F5F3EE;
+}
+
+.row-odd {
+  background: white;
+}
+
+.total-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.total-box {
+  border: 1.5px solid #C9A24B;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-align: right;
+}
+
+.total-label {
+  font-size: 10px;
+  color: #8A8577;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.total-value {
+  font-size: 18px;
+  color: #161B33;
+  font-family: monospace;
+  margin: 2px 0 0;
+}
