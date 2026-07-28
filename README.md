@@ -1,16 +1,61 @@
-# React + Vite
+# Invoice Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive invoice generator built with React. Fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF — all in the browser, no backend required.
 
-Currently, two official plugins are available:
+**Live demo:** [add your Vercel link here]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Invoice Generator screenshot](add-screenshot-path-here.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Live invoice preview** — updates instantly as you type, no page reloads
+- **PDF export** — styled, branded PDF with header band, gold accent divider, and shaded item table
+- **Form validation** — checks for valid email, required fields, and item pricing before generating
+- **Free item support** — items can be explicitly priced at 0 without triggering validation errors
+- **Multi-page PDF support** — automatically adds new pages if the item list overflows one page
+- **Fully responsive** — the layout stacks cleanly on mobile, with the preview moving below the form
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- jsPDF for PDF generation
+- Plain CSS (component-scoped styling, no framework dependency)
+
+## Project structure
+
+```
+src/
+├── InvoiceForm.jsx          — main component, holds state
+├── InvoiceForm.css          — all styling
+├── components/
+│   ├── BusinessForm.jsx
+│   ├── InvoiceDetailsForm.jsx
+│   ├── ClientForm.jsx
+│   ├── ItemsForm.jsx
+│   └── InvoicePreview.jsx
+└── utils/
+    ├── format.js             — number formatting helper
+    ├── validateInvoice.js    — validation logic
+    └── generatePDF.js        — PDF generation logic
+```
+
+The app is split into focused components and utility modules — validation, PDF generation, and UI are kept separate so each piece is easy to read, test, and extend independently.
+
+## Running locally
+
+```bash
+git clone https://github.com/awaishussainsoomro/invoice-generator.git
+cd invoice-generator
+npm install
+npm run dev
+```
+
+## What I'd build next
+
+- Save invoice history (localStorage or a backend)
+- Multiple invoice templates/themes
+- Recurring invoice support for subscription-style billing
+
+---
+
+Built by [Awais Hussain Soomro](https://github.com/awaishussainsoomro)
