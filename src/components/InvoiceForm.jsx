@@ -54,7 +54,7 @@ function InvoiceForm() {
     <div className="invoice-page">
       <div className="invoice-container">
         <h1 className="invoice-title">Invoice generator</h1>
-        <p className="invoice-subtitle">Fill in the details — the invoice builds live on the right.</p>
+        <p className="invoice-subtitle">Fill in the details | The invoice builds live on the right.</p>
 
         <div className="invoice-grid">
           <div className="card form-card">
