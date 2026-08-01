@@ -75,13 +75,9 @@ function InvoiceForm() {
     <div className="invoice-page">
       <div className="invoice-container">
         <h1 className="invoice-title">Invoice generator</h1>
-<<<<<<< HEAD
         <p className="invoice-subtitle">
           Fill in the details | The invoice builds live on the right.
         </p>
-=======
-        <p className="invoice-subtitle">Fill in the details | The invoice builds live on the right.</p>
->>>>>>> 7b8ddbd830fad0badd3ef1af80f97f4434bcce48
 
         <div className="invoice-grid">
           <div className="card form-card">
