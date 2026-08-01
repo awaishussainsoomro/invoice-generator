@@ -1,8 +1,7 @@
 import jsPDF from 'jspdf';
 import { fmt } from './format';
 
-// Assumes the data has already been validated (see validateInvoice.js)
-// before this is called — this function only handles drawing the PDF.
+
 export function generateInvoicePDF({ businessName, email, invoiceNo, date, clientName, items, total }) {
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -46,10 +45,10 @@ export function generateInvoicePDF({ businessName, email, invoiceNo, date, clien
   // Table rows
   y += 10;
   doc.setTextColor(30, 30, 30);
-  const nameColWidth = 95; // space before the QTY column at x=120
+  const nameColWidth = 95; 
 
   items.forEach((item, i) => {
-    // page overflow guard — start a new page before running off the bottom
+    
     if (y > 265) {
       doc.addPage();
       y = 25;
@@ -62,7 +61,7 @@ export function generateInvoicePDF({ businessName, email, invoiceNo, date, clien
       doc.rect(15, y - 6, pageWidth - 30, 8, 'F');
     }
     doc.setFontSize(9);
-    // wrap long item names instead of overflowing into other columns
+
     const nameLines = doc.splitTextToSize(item.name || '-', nameColWidth);
     doc.text(nameLines[0], 18, y);
     doc.text(String(qtyNum), 120, y);

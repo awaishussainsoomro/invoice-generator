@@ -25,7 +25,7 @@ function InvoiceForm() {
 
   const updateItem = (index, field, value) => {
     const newItems = [...items];
-    newItems[index][field] = value; // kept as raw string while typing — see format.js
+    newItems[index][field] = value; 
     setItems(newItems);
   };
 
@@ -38,7 +38,7 @@ function InvoiceForm() {
   };
 
   const removeItem = (index) => {
-    if (items.length === 1) return; // always keep at least one row
+    if (items.length === 1) return; 
     setItems(items.filter((_, i) => i !== index));
   };
 

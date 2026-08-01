@@ -1,8 +1,5 @@
 export const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Returns an error message string if something is wrong, or null if the
-// invoice is ready to generate. Keeping this separate from the UI means
-// the same rules could be reused (e.g. in a test file) without touching React.
 export function validateInvoice({ businessName, email, clientName, items }) {
   if (!businessName.trim()) {
     return 'Please enter your business name before generating the invoice.';
