@@ -1,47 +1,51 @@
 # Invoice Generator
 
-A clean, responsive invoice generator built with React. Fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF, all in the browser, no backend required.
+A clean, responsive invoice generator built with React, fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF. No backend, no sign-up, everything runs in the browser.
 
-**Live demo:** [add your Vercel link here]
+🔗 **Live Demo:** https://invoice-generator-five-liart.vercel.app/
+📁 **Tech Stack:** React (Vite), jsPDF, component-scoped CSS
 
 ![Invoice Generator screenshot](add-screenshot-path-here.png)
 
-## Features
+## Why I Built It
+
+Most beginner "invoice generator" projects stop at rendering a form. I wanted to go further and solve the part that actually matters for a freelancer: getting a client-ready PDF out the other end with validation so you can't send a broken invoice, and layout logic that doesn't break when the item list gets long.
+
+## What It Does
+
+Freelancers and small businesses need to send professional invoices fast, without opening Word or Excel every time. This tool takes business, client, and line-item details, shows a live preview as you type, and exports a styled, branded PDF ready to send no template file, no manual formatting.
+
+## Key Features
 
 - **Live invoice preview** — updates instantly as you type, no page reloads
 - **PDF export** — styled, branded PDF with header band, gold accent divider, and shaded item table
 - **Form validation** — checks for valid email, required fields, and item pricing before generating
 - **Free item support** — items can be explicitly priced at 0 without triggering validation errors
 - **Multi-page PDF support** — automatically adds new pages if the item list overflows one page
-- **Fully responsive** — the layout stacks cleanly on mobile, with the preview moving below the form
+- **Fully responsive** — layout stacks cleanly on mobile, with the preview moving below the form
 
-## Tech stack
-
-- React (Vite)
-- jsPDF for PDF generation
-- Plain CSS (component-scoped styling, no framework dependency)
-
-## Project structure
+## Project Structure
 
 ```
 src/
-├── InvoiceForm.jsx          — main component, holds state
-├── InvoiceForm.css          — all styling
+├── App.jsx
 ├── components/
+│   ├── InvoiceForm.jsx        — main component, holds state
+│   ├── InvoiceForm.css        — component styling
 │   ├── BusinessForm.jsx
 │   ├── InvoiceDetailsForm.jsx
 │   ├── ClientForm.jsx
 │   ├── ItemsForm.jsx
 │   └── InvoicePreview.jsx
 └── utils/
-    ├── format.js             — number formatting helper
-    ├── validateInvoice.js    — validation logic
-    └── generatePDF.js        — PDF generation logic
+    ├── format.js               — number formatting helper
+    ├── validateInvoice.js      — validation logic
+    └── generatePDF.js          — PDF generation logic (jsPDF)
 ```
 
-The app is split into focused components and utility modules — validation, PDF generation, and UI are kept separate so each piece is easy to read, test, and extend independently.
+Validation, PDF generation, and UI are kept in separate modules so each piece can be read, tested, and extended independently.
 
-## Running locally
+## Running Locally
 
 ```bash
 git clone https://github.com/awaishussainsoomro/invoice-generator.git
@@ -50,9 +54,9 @@ npm install
 npm run dev
 ```
 
-## What I'd build next
+## What I'd Improve Next
 
-- Save invoice history (localStorage or a backend)
+- Save invoice history (localStorage, then a real backend)
 - Multiple invoice templates/themes
 - Recurring invoice support for subscription-style billing
 
