@@ -2,7 +2,7 @@
 
 A clean, responsive invoice generator built with React, fill in business, client, and item details, watch the invoice build live in a preview panel, and download a professionally styled PDF. No backend, no sign-up, everything runs in the browser.
 
-🔗 **Live Demo:** https://invoice-generator-five-liart.vercel.app/
+🔗 **Live Demo:** (https://invoice-generator-five-liart.vercel.app/)
 📁 **Tech Stack:** React (Vite), jsPDF, component-scoped CSS
 
 ![Invoice Generator screenshot](add-screenshot-path-here.png)
